@@ -1,29 +1,36 @@
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth"
-        });
-    });
-});
+function convert(){
 
-// Contact form message
-const form = document.querySelector("form");
+let temp = parseFloat(document.getElementById("temp").value);
 
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("Thank you! Your message has been sent successfully.");
-    form.reset();
-});
+let unit = document.getElementById("unit").value;
 
-// Navbar shadow on scroll
-window.addEventListener("scroll", () => {
-    const header = document.querySelector("header");
+let result = "";
 
-    if (window.scrollY > 50) {
-        header.style.boxShadow = "0 2px 10px rgba(0,0,0,0.2)";
-    } else {
-        header.style.boxShadow = "none";
-    }
-});
+if(isNaN(temp)){
+    result="Please enter a valid temperature.";
+}
+else if(unit==="C"){
+    result =
+    `${temp}°C = ${(temp*9/5+32).toFixed(2)}°F<br>
+     ${(temp+273.15).toFixed(2)} K`;
+}
+else if(unit==="F"){
+    let c=(temp-32)*5/9;
+
+    result=
+    `${temp}°F = ${c.toFixed(2)}°C<br>
+     ${(c+273.15).toFixed(2)} K`;
+}
+else{
+
+    let c=temp-273.15;
+
+    result=
+    `${temp} K = ${c.toFixed(2)}°C<br>
+     ${(c*9/5+32).toFixed(2)}°F`;
+
+}
+
+document.getElementById("result").innerHTML=result;
+
+}

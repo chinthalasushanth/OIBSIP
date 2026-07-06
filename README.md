@@ -1,35 +1,20 @@
-# NextGen Tech - Landing Page
+# Temperature Converter
 
 ## Description
-A responsive landing page developed using HTML, CSS, and JavaScript.
+
+A simple Temperature Converter using HTML, CSS and JavaScript.
 
 ## Features
 
-- Responsive Design
-- Sticky Navigation Bar
-- Hero Section
-- About Section
-- Services Section
-- Statistics
-- Testimonials
-- Contact Form
-- Smooth Scrolling
-- Modern UI
+- Celsius to Fahrenheit
+- Celsius to Kelvin
+- Fahrenheit to Celsius
+- Fahrenheit to Kelvin
+- Kelvin to Celsius
+- Kelvin to Fahrenheit
 
-## Technologies Used
+## Technologies
 
 - HTML5
 - CSS3
 - JavaScript
-
-## How to Run
-
-1. Download the project.
-2. Open the folder in VS Code.
-3. Install Live Server.
-4. Open `index.html`.
-5. Click **Go Live**.
-
-## Author
-
-Developed for the Oasis Infobyte Web Development Internship.
